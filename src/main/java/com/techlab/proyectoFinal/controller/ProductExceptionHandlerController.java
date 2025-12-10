@@ -15,7 +15,7 @@ import java.util.Map;
 public class ProductExceptionHandlerController {
 
 
-    //Esta clase maneja las excepciones de validación y devuelve un mensaje de error adecuado al cliente.
+    //Esta clase maneja las excepciones de validación en el DTO y devuelve un mensaje de error al usuario.
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
@@ -27,7 +27,7 @@ public class ProductExceptionHandlerController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
     }
 
-    //Manejo de errores de deserialización JSON (como valores de enum inválidos)
+    //Manejo de errores de deserialización JSON (como valores de enum inválidos, en este caso para Category)
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<Map<String, String>> handleHttpMessageNotReadable(HttpMessageNotReadableException ex) {
         Map<String, String> errors = new HashMap<>();

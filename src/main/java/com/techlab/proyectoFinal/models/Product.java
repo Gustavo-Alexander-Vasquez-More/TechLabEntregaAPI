@@ -2,7 +2,6 @@ package com.techlab.proyectoFinal.models;
 
 import com.techlab.proyectoFinal.utils.Category;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -12,9 +12,6 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 public class UpdateProductRequestDTO {
-    // Los campos son opcionales ya que se pueden actualizar uno o varios campos del producto
-    // Solo se valida el precio y el stock si se proporcionan para que sean valores válidos
-
     private String name;
     private String description;
     @Min(value = 1, message = "El precio debe ser mayor a 0")
@@ -24,6 +21,6 @@ public class UpdateProductRequestDTO {
     private String imageUrl;
     @Min(value = 0, message = "El stock no puede ser negativo")
     private Integer stock;
-    private Boolean available;  // Boolean objeto, no boolean primitivo, para permitir null
+    private Boolean available;
 
 }
