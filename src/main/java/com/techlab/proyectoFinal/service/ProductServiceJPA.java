@@ -72,6 +72,9 @@ public class ProductServiceJPA implements ProductService {
         if (updateProductRequestDTO.getStock() != null) {
             product.setStock(updateProductRequestDTO.getStock());
         }
+        if (updateProductRequestDTO.getAvailable() != null) {
+            product.setAvailable(updateProductRequestDTO.getAvailable());
+        }
 
         return productRepository.save(product);
     }

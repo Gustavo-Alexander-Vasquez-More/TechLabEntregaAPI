@@ -24,7 +24,7 @@ public class Product {
     private Category category;
     private String imageUrl;
     private int stock;
-    private boolean avaible=true;
+    private boolean available=true;
     @Column(name = "creation_date")
     private LocalDateTime creationDate;
 
